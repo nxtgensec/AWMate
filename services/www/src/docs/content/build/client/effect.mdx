@@ -3,7 +3,7 @@ title: "Effect"
 ---
 
 `@opencode/client/effect` is the Effect-native client for the OpenCode HTTP API. It returns typed Effects and Streams
-and decodes responses into OpenCode schema values.
+and decodes responses into AWMate schema values.
 
 ```sh
 bun add @opencode/client effect
@@ -19,7 +19,7 @@ import { Effect } from "effect"
 import { FetchHttpClient } from "effect/http"
 
 const program = Effect.gen(function* () {
-  const client = yield* OpenCode.make({ baseUrl: "http://localhost:4096" })
+  const client = yield* AWMate.make({ baseUrl: "http://localhost:4096" })
   const session = yield* client.session.create({
     location: Location.Ref.make({ directory: AbsolutePath.make("/workspace") }),
   })
@@ -65,7 +65,7 @@ Streaming operations such as `event.subscribe()` and `session.log()` return Effe
 import { Effect, Stream } from "effect"
 
 yield *
-  client.event.subscribe().pipe(Stream.runForEach((event) => Effect.logInfo("OpenCode event", { type: event.type })))
+  client.event.subscribe().pipe(Stream.runForEach((event) => Effect.logInfo("AWMate event", { type: event.type })))
 ```
 
 Native and RPC event Streams share one lazy connection per client. Constructing
@@ -128,7 +128,7 @@ import { FetchHttpClient, HttpClient, HttpClientRequest } from "effect/http"
 const program = Effect.gen(function* () {
   const endpoint = yield* Service.ensure()
   const httpClient = yield* HttpClient.HttpClient
-  const client = yield* OpenCode.make({ baseUrl: endpoint.url }).pipe(
+  const client = yield* AWMate.make({ baseUrl: endpoint.url }).pipe(
     Effect.provideService(
       HttpClient.HttpClient,
       HttpClient.mapRequest(httpClient, (request) => HttpClientRequest.setHeaders(request, Service.headers(endpoint))),

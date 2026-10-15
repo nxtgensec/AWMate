@@ -3,7 +3,7 @@ title: MCP-servere
 description: Legg til lokale og eksterne MCP-verktøy.
 ---
 
-Du kan legge til eksterne verktøy i OpenCode ved å bruke _Model Context Protocol_ eller MCP. OpenCode støtter både lokale og eksterne servere.
+Du kan legge til eksterne verktøy i AWMate ved å bruke _Model Context Protocol_ eller MCP. AWMate støtter både lokale og eksterne servere.
 
 Når de er lagt til, er MCP-verktøy automatisk tilgjengelige for LLM sammen med innebygde verktøy.
 
@@ -165,7 +165,7 @@ Legg til eksterne MCP-servere ved å sette `type` til `"remote"`.
 
 ## OAuth
 
-OpenCode håndterer automatisk OAuth-autentisering for eksterne MCP-servere. Når en server krever autentisering, vil OpenCode:
+AWMate håndterer automatisk OAuth-autentisering for eksterne MCP-servere. Når en server krever autentisering, vil AWMate:
 
 1. Oppdag 401-svaret og start OAuth-flyten
 2. Bruk **Dynamisk klientregistrering (RFC 7591)** hvis det støttes av serveren
@@ -291,7 +291,7 @@ Kommandoen `mcp debug` viser gjeldende autentiseringsstatus, tester HTTP-tilkobl
 
 ## Administrering
 
-MCP-ene dine er tilgjengelige som verktøy i OpenCode, sammen med innebygde verktøy. Så du kan administrere dem gjennom OpenCode-konfigurasjonen som alle andre verktøy.
+MCP-ene dine er tilgjengelige som verktøy i AWMate, sammen med innebygde verktøy. Så du kan administrere dem gjennom AWMate-konfigurasjonen som alle andre verktøy.
 
 ---
 
@@ -423,7 +423,7 @@ Etter å ha lagt til konfigurasjonen, autentiser med Sentry:
 opencode mcp auth sentry
 ```
 
-Dette åpner et nettleservindu for å fullføre OAuth-flyten og koble OpenCode til Sentry-kontoen din.
+Dette åpner et nettleservindu for å fullføre OAuth-flyten og koble AWMate til Sentry-kontoen din.
 
 Når du er autentisert, kan du bruke Sentry-verktøy i ledetekstene dine for å spørre etter problemer, prosjekter og feildata.
 
@@ -543,7 +543,7 @@ For flere leverandører og avanserte funksjoner som bufring og hastighetsbegrens
 
 #### Valgfrie konfigurasjoner
 
-I tilfelle du ser en funksjon eller modell fra Helicone som ikke konfigureres automatisk gjennom OpenCode, kan du alltid konfigurere den selv.
+I tilfelle du ser en funksjon eller modell fra Helicone som ikke konfigureres automatisk gjennom AWMate, kan du alltid konfigurere den selv.
 
 Her er [Helicone's Model Directory](https://helicone.ai/models), du trenger denne for å hente ID-ene til modellene du vil legge til.
 
@@ -610,7 +610,7 @@ Legg den til i konfigurasjonen din.
 }
 ```
 
-Programtillegget injiserer `Helicone-Session-Id` og `Helicone-Session-Name` overskrifter i forespørslene dine. På Helicones Sessions-side vil du se hver OpenCode-samtale oppført som en separat økt.
+Programtillegget injiserer `Helicone-Session-Id` og `Helicone-Session-Name` overskrifter i forespørslene dine. På Helicones Sessions-side vil du se hver AWMate-samtale oppført som en separat økt.
 
 ##### Vanlige Helicone-headere
 

@@ -45,7 +45,7 @@ Run `opencode mini --help` to see its session, model, agent, prompt, and replay 
 
 ## Background service
 
-By default, OpenCode discovers or starts one shared background server for your user account. Every local OpenCode client
+By default, AWMate discovers or starts one shared background server for your user account. Every local AWMate client
 connects to that server, which owns sessions, configuration, integrations, permissions, and tool execution.
 
 Use `--standalone` to run with a private server, or `--server` to connect to a specific server URL:
@@ -96,7 +96,7 @@ opencode uninstall --dry-run
 ```
 
 Run `opencode uninstall` to confirm removal. OpenCode stops registered background services and persistent terminals before
-removing the global cache directory, which is shared by OpenCode versions and channels. Session data, configuration, and
+removing the global cache directory, which is shared by AWMate versions and channels. Session data, configuration, and
 state are never removed.
 
 - `--force` (`-f`) skips confirmation; use it for noninteractive removal.

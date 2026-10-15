@@ -1,6 +1,7 @@
 import { migrateV1, parseThemeDocument, type ThemeDocument, type ModeDefinition } from "@opencode/theme/tui"
 import { resolveThemeColors } from "./resolve"
 import { DEFAULT_THEMES, type Theme, type ThemeV1Json } from "./v1"
+import awmate from "./assets/v2/awmate.json" with { type: "json" }
 import opencode from "./assets/v2/opencode.json" with { type: "json" }
 
 export { DEFAULT_THEMES, type Theme, type ThemeV1Json } from "./v1"
@@ -23,11 +24,19 @@ export function getOpenCodeTheme() {
   return document
 }
 
+export function getAWMateTheme() {
+  if (opencodeTheme) return opencodeTheme
+  const document = parseThemeDocument(awmate, "awmate") as NonNullable<typeof opencodeTheme>
+  opencodeTheme = document
+  return document
+}
+
 function listThemes(): Record<string, ThemeDocumentSource> {
   // Priority: defaults < custom files < generated system.
   const themes: Record<string, ThemeDocumentSource> = {
     ...DEFAULT_THEMES,
     opencode: getOpenCodeTheme(),
+    awmate: getAWMateTheme(),
     ...customThemes,
   }
   return {

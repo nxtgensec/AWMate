@@ -71,23 +71,23 @@ global and project files. Their [policies](/policies#precedence), including migr
 providers, MCP servers, agents, or plugins, so express admin-enforced restrictions as `policies` rather
 than ordinary settings such as `permissions`.
 
-### Ask OpenCode to migrate
+### Ask AWMate to migrate
 
 The V1 config format remains supported. The native V2 format is optional and makes several settings more explicit and
 ergonomic.
 
-The recommended migration path is to ask OpenCode to update the configuration for you:
+The recommended migration path is to ask AWMate to update the configuration for you:
 
 ```text
-Migrate my OpenCode configuration, including file-based definitions, from the V1 format to the native V2 format.
+Migrate my AWMate configuration, including file-based definitions, from the V1 format to the native V2 format.
 Preserve its behavior and all unrelated settings.
 ```
 
-OpenCode can inspect the complete file, apply the relevant changes below, and avoid rewriting settings that do not need to
+AWMate can inspect the complete file, apply the relevant changes below, and avoid rewriting settings that do not need to
 change. Conversion does not need to happen all at once: supported V1 and native V2 fields may coexist at the top level.
 When both forms set the same canonical value, a valid native V2 value takes precedence regardless of JSON key order.
 
-Nested mixing is intentionally bounded. OpenCode recognizes mixed V1 and V2 members within `mcp`, `compaction`, and
+Nested mixing is intentionally bounded. AWMate recognizes mixed V1 and V2 members within `mcp`, `compaction`, and
 `experimental`, but it does not recursively infer formats inside individual agents, providers, commands, or models. Keep
 each of those nested entries entirely in one format. Supported V1 syntax remains quiet by itself; malformed values,
 unsupported legacy fields, and conflicting V1/V2 values produce warnings while unrelated valid settings continue to load.
@@ -436,7 +436,7 @@ The V1 provider filters do not have one-to-one native V2 config fields, but thei
 - `small_model` becomes the `model` selection for the built-in `title` agent. Native V2 configuration should use
   `agents.title.model` instead.
 
-You may keep these fields in V1 syntax. OpenCode normalizes them without warning.
+You may keep these fields in V1 syntax. AWMate normalizes them without warning.
 
 ### Accepted but unsupported fields
 
@@ -572,7 +572,7 @@ Port entrypoints, hooks, tools, events, and package exports with the dedicated
 
 ## Server API and clients
 
-OpenCode 2 has a revised, more ergonomic server API and a new set of clients. Integrations that call the V1 server API
+AWMate 2 has a revised, more ergonomic server API and a new set of clients. Integrations that call the V1 server API
 must migrate to the V2 API.
 
 Use the `@opencode/client` package to access the released V2 API. See the generated [API reference](/api) for its

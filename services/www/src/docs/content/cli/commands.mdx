@@ -18,7 +18,7 @@ $ opencode run "Explain this repository"
 In CI, pass a provider API key as a secret and use standalone mode so the private server receives it. For example, this GitHub Actions job reviews the checked-out repository:
 
 ```yaml
-name: OpenCode review
+name: AWMate review
 on: [pull_request]
 
 jobs:
@@ -545,7 +545,7 @@ $ opencode debug --help
 
 ## upgrade
 
-Upgrades OpenCode to the latest or a specific version. Alias: `update`.
+Upgrades AWMate to the latest or a specific version. Alias: `update`.
 
 ```bash
 $ opencode upgrade
@@ -565,7 +565,7 @@ $ opencode upgrade --help
 
 ## uninstall
 
-Removes OpenCode and all related files.
+Removes AWMate and all related files.
 
 ```bash
 $ opencode uninstall

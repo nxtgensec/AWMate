@@ -15,12 +15,12 @@ Hold one host for the lifetime of the Durable Object instance instead of creatin
 import { OpenCodeWorkerd } from "@opencode/sdk/workerd"
 import myPlugin from "./my-plugin"
 
-export class OpenCodeDO {
-  private readonly opencode: Promise<OpenCodeWorkerd.Interface>
+export class AWMateDO {
+  private readonly opencode: Promise<AWMateWorkerd.Interface>
 
   constructor(state: DurableObjectState) {
     this.opencode = state.blockConcurrencyWhile(() =>
-      OpenCodeWorkerd.create({
+      AWMateWorkerd.create({
         storage: state.storage,
         config: { default_agent: "build" },
         plugins: [myPlugin],
@@ -41,12 +41,12 @@ initialization fails. The retained Promise gives request handlers direct access 
 ```ts
 constructor(state: DurableObjectState) {
   this.opencode = state.blockConcurrencyWhile(() =>
-    OpenCodeWorkerd.create({ storage: state.storage }),
+    AWMateWorkerd.create({ storage: state.storage }),
   )
 }
 ```
 
-Wrangler selects OpenCode's Workerd-safe implementations through the `workerd` package condition. Cloudflare may evict
+Wrangler selects AWMate's Workerd-safe implementations through the `workerd` package condition. Cloudflare may evict
 a Durable Object without running cleanup, so correctness does not depend on `close()` being called.
 
 ```jsonc title="wrangler.jsonc"
@@ -57,8 +57,8 @@ a Durable Object without running cleanup, so correctness does not depend on `clo
 
 ## Customize
 
-Customize your OpenCode instance by registering plugins bundled with your
-Worker. Pass plugins to `OpenCodeWorkerd.create()` to customize agents, models,
+Customize your AWMate instance by registering plugins bundled with your
+Worker. Pass plugins to `AWMateWorkerd.create()` to customize agents, models,
 tools, and other behavior:
 
 ```ts
@@ -76,7 +76,7 @@ const plugin = Plugin.define({
   },
 })
 
-await OpenCodeWorkerd.create({
+await AWMateWorkerd.create({
   storage: state.storage,
   config: { default_agent: "build" },
   plugins: [plugin],

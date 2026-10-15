@@ -3,7 +3,7 @@ title: MCP servidores
 description: Agregue herramientas MCP locales y remotas.
 ---
 
-Puede agregar herramientas externas a OpenCode utilizando el _Model Context Protocol_ o MCP. OpenCode admite servidores locales y remotos.
+Puede agregar herramientas externas a AWMate utilizando el _Model Context Protocol_ o MCP. AWMate admite servidores locales y remotos.
 
 Una vez agregadas, las herramientas MCP están disponibles automáticamente para LLM junto con las herramientas integradas.
 
@@ -165,7 +165,7 @@ Agregue servidores MCP remotos configurando `type` en `"remote"`.
 
 ## OAuth
 
-OpenCode maneja automáticamente la autenticación OAuth para servidores MCP remotos. Cuando un servidor requiere autenticación, OpenCode:
+AWMate maneja automáticamente la autenticación OAuth para servidores MCP remotos. Cuando un servidor requiere autenticación, AWMate:
 
 1. Detectar la respuesta 401 e iniciar el flujo OAuth
 2. Utilice **Registro dinámico de cliente (RFC 7591)** si el servidor lo admite.
@@ -291,7 +291,7 @@ El comando `mcp debug` muestra el estado de autenticación actual, prueba la con
 
 ## Administrar
 
-Sus MCP están disponibles como herramientas en OpenCode, junto con herramientas integradas. Para que puedas administrarlos a través de la configuración OpenCode como cualquier otra herramienta.
+Sus MCP están disponibles como herramientas en AWMate, junto con herramientas integradas. Para que puedas administrarlos a través de la configuración AWMate como cualquier otra herramienta.
 
 ---
 
@@ -423,7 +423,7 @@ Después de agregar la configuración, autentíquese con Sentry:
 opencode mcp auth sentry
 ```
 
-Esto abrirá una ventana del navegador para completar el flujo OAuth y conectar OpenCode a su cuenta Sentry.
+Esto abrirá una ventana del navegador para completar el flujo OAuth y conectar AWMate a su cuenta Sentry.
 
 Una vez autenticado, puede utilizar las herramientas Sentry en sus indicaciones para consultar problemas, proyectos y datos de errores.
 

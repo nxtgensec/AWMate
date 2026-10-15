@@ -3,7 +3,7 @@ title: MCP 服务器
 description: 添加本地和远程 MCP 工具。
 ---
 
-你可以通过 _Model Context Protocol_（MCP）为 OpenCode 添加外部工具。OpenCode 同时支持本地和远程服务器。
+你可以通过 _Model Context Protocol_（MCP）为 AWMate 添加外部工具。AWMate 同时支持本地和远程服务器。
 
 添加后，MCP 工具会自动与内置工具一起提供给 LLM 使用。
 
@@ -165,7 +165,7 @@ use the mcp_everything tool to add the number 3 and 4
 
 ## OAuth
 
-OpenCode 会自动处理远程 MCP 服务器的 OAuth 身份验证。当服务器需要身份验证时，OpenCode 将：
+AWMate 会自动处理远程 MCP 服务器的 OAuth 身份验证。当服务器需要身份验证时，AWMate 将：
 
 1. 检测 401 响应并启动 OAuth 流程
 2. 在服务器支持的情况下使用**动态客户端注册（RFC 7591）**
@@ -291,7 +291,7 @@ opencode mcp debug my-oauth-server
 
 ## 管理
 
-你的 MCP 在 OpenCode 中作为工具使用，与内置工具并列。因此，你可以像管理其他工具一样，通过 OpenCode 配置来管理它们。
+你的 MCP 在 AWMate 中作为工具使用，与内置工具并列。因此，你可以像管理其他工具一样，通过 AWMate 配置来管理它们。
 
 ---
 
@@ -423,7 +423,7 @@ MCP 服务器工具在注册时以服务器名称作为前缀，因此要禁用�
 opencode mcp auth sentry
 ```
 
-这会打开浏览器窗口完成 OAuth 流程，将 OpenCode 连接到你的 Sentry 账户。
+这会打开浏览器窗口完成 OAuth 流程，将 AWMate 连接到你的 Sentry 账户。
 
 认证完成后，你可以在提示词中使用 Sentry 工具来查询问题、项目和错误数据。
 

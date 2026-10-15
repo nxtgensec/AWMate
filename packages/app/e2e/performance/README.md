@@ -147,7 +147,7 @@ bunx playwright test --config e2e/performance/playwright.config.ts \
   timeline/provider-memory-benchmark.spec.ts --repeat-each=3
 ```
 
-`PROVIDER_MEMORY_MODELS` defaults to 1,200 and `PROVIDER_MEMORY_SWITCHES` defaults to 10. Each sample records Chromium's `Runtime.getHeapUsage` and `Memory.getDOMCounters` after an explicit garbage collection. This measures retained state, not allocation peaks or normal GC timing. It does not include worker heaps, the Electron main/GPU processes, or the OpenCode server, and must not be reported as total desktop RAM. Use identical model counts and navigation sequences for before/after comparisons.
+`PROVIDER_MEMORY_MODELS` defaults to 1,200 and `PROVIDER_MEMORY_SWITCHES` defaults to 10. Each sample records Chromium's `Runtime.getHeapUsage` and `Memory.getDOMCounters` after an explicit garbage collection. This measures retained state, not allocation peaks or normal GC timing. It does not include worker heaps, the Electron main/GPU processes, or the AWMate server, and must not be reported as total desktop RAM. Use identical model counts and navigation sequences for before/after comparisons.
 
 ## Chrome traces
 

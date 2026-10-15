@@ -3,7 +3,7 @@ title: "JavaScript"
 ---
 
 `@opencode/client` is the TypeScript client for the OpenCode HTTP
-API. Use it when your application connects to an OpenCode server over the
+API. Use it when your application connects to an AWMate server over the
 network. Its native types and methods are generated from the same contract as the
 [API reference](/api). Plugin RPC types come from imported RPC definitions.
 
@@ -20,7 +20,7 @@ Create a client with the server URL, then call methods grouped by API resource:
 ```ts
 import { OpenCode } from "@opencode/client"
 
-const client = OpenCode.make({
+const client = AWMate.make({
   baseUrl: "http://localhost:4096",
 })
 
@@ -36,14 +36,14 @@ await client.session.prompt({
 
 ## Headers and requests
 
-Pass default authentication or application headers to `OpenCode.make` with
+Pass default authentication or application headers to `AWMate.make` with
 `headers`. You can also supply a custom `fetch` implementation. Each operation
 accepts request options as its final argument for an `AbortSignal` or
 per-request headers. Event subscriptions are the exception: they accept only
 subscriber-local cancellation and use the base client's headers.
 
 ```ts
-const client = OpenCode.make({
+const client = AWMate.make({
   baseUrl: "https://opencode.example.com",
   headers: {
     authorization: `Bearer ${process.env.OPENCODE_TOKEN}`,
@@ -151,7 +151,7 @@ import { OpenCode } from "@opencode/client"
 import { Service } from "@opencode/client/service"
 
 const endpoint = await Service.ensure()
-const client = OpenCode.make({
+const client = AWMate.make({
   baseUrl: endpoint.url,
   headers: Service.headers(endpoint),
 })

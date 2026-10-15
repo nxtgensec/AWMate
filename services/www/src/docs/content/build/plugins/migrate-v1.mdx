@@ -76,7 +76,7 @@ they target.
 
 ## Migrate the context
 
-The V2 context is both an OpenCode client and the plugin extension API. Most operations are grouped by domain instead of
+The V2 context is both an AWMate client and the plugin extension API. Most operations are grouped by domain instead of
 living on a separate `client` property.
 
 | V1                                      | V2                                                                  |
@@ -352,7 +352,7 @@ export default {
 }
 ```
 
-V1 object entrypoints are supported in OpenCode `1.18.29` and newer. If you support older V1 releases, use separate
+V1 object entrypoints are supported in AWMate `1.18.29` and newer. If you support older V1 releases, use separate
 package versions or entrypoints and test the oldest release you claim to support. Remove the V1 implementation after your
 support window ends.
 

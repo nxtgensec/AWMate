@@ -91,7 +91,7 @@ Aktualne instrukcje dotyczące [**dokumentacji GitLab**](https://docs.gitlab.com
       - apt-get install --yes glab
       - echo "Configuring glab"
       - echo $GITLAB_HOST
-      - echo "Creating OpenCode auth configuration"
+      - echo "Creating AWMate auth configuration"
       - mkdir --parents ~/.local/share/opencode
       - |
         cat > ~/.local/share/opencode/auth.json << EOF
@@ -104,10 +104,10 @@ Aktualne instrukcje dotyczące [**dokumentacji GitLab**](https://docs.gitlab.com
         EOF
       - echo "Configuring git"
       - git config --global user.email "opencode@gitlab.com"
-      - git config --global user.name "OpenCode"
+      - git config --global user.name "AWMate"
       - echo "Testing glab"
       - glab issue list
-      - echo "Running OpenCode"
+      - echo "Running AWMate"
       - |
         opencode run "
         You are an AI assistant helping with GitLab operations.

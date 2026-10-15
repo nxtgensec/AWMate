@@ -1,4 +1,4 @@
-# OpenCode Changelog
+# AWMate Changelog
 
 The changelog Worker renders the root `CHANGELOG.md` at `https://opencode.ai/changelog`.
 

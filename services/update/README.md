@@ -1,4 +1,4 @@
-# OpenCode Update
+# AWMate Update
 
 The update Worker serves all selected artifacts for a channel.
 
@@ -82,7 +82,7 @@ Both admin mounts must be protected by the same Cloudflare Access self-hosted ap
 
 - Public hostname/path: `update.opencode.ai/admin*`
 - Public hostname/path: `opencode.ai/update/admin*`
-- Policy: allow the OpenCode team identity group
+- Policy: allow the AWMate team identity group
 
 Configure Access before deploying the new Worker route. The Worker has `workers_dev`
 and preview URLs disabled; it is exposed through its custom hostname and the `/update` routes.
