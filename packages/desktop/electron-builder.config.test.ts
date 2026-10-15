@@ -13,9 +13,9 @@ import { CLI_BINARIES, nodePtyPackage } from "./scripts/utils"
 const { FileMatcher } = createRequire(import.meta.resolve("electron-builder"))("app-builder-lib/out/fileMatcher")
 
 const channels = [
-  { channel: "dev", appId: "ai.opencode.desktop.dev" },
-  { channel: "beta", appId: "ai.opencode.desktop.beta" },
-  { channel: "prod", appId: "ai.opencode.desktop" },
+  { channel: "dev", appId: "ai.awmate.desktop.dev" },
+  { channel: "beta", appId: "ai.awmate.desktop.beta" },
+  { channel: "prod", appId: "ai.awmate.desktop" },
 ] as const
 
 function load(channel: string, target?: string): Configuration {
@@ -57,16 +57,16 @@ test.each(channels)("channel identity for $channel", ({ channel, appId }) => {
   for (const fpm of [config.deb?.fpm, config.rpm?.fpm]) {
     expect(fpm).toContainEqual(expect.stringContaining(`/usr/share/metainfo/${appId}.metainfo.xml`))
     expect(
-      fpm?.some((entry) => entry.endsWith("opencode-desktop.desktop=/usr/share/applications/opencode-desktop.desktop")),
+      fpm?.some((entry) => entry.endsWith("awmate-desktop.desktop=/usr/share/applications/awmate-desktop.desktop")),
     ).toBe(channel === "prod")
   }
 })
 
 test("legacy Linux launcher stays hidden", async () => {
-  const desktop = await Bun.file(path.join(import.meta.dirname, "resources/linux/opencode-desktop.desktop")).text()
-  expect(desktop).toContain("Exec=/opt/OpenCode/ai.opencode.desktop %U")
-  expect(desktop).toContain("Icon=ai.opencode.desktop")
-  expect(desktop).toContain("StartupWMClass=ai.opencode.desktop")
+  const desktop = await Bun.file(path.join(import.meta.dirname, "resources/linux/awmate-desktop.desktop")).text()
+  expect(desktop).toContain("Exec=/opt/AWMate/ai.awmate.desktop %U")
+  expect(desktop).toContain("Icon=ai.awmate.desktop")
+  expect(desktop).toContain("StartupWMClass=ai.awmate.desktop")
   expect(desktop).toContain("NoDisplay=true")
 })
 

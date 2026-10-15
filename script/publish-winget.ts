@@ -48,7 +48,7 @@ const packages = [
       "InstallerType: nullsoft",
       "Scope: user",
       "UpgradeBehavior: install",
-      // electron-builder derives the NSIS uninstall key from the production app ID, ai.opencode.desktop.
+      // electron-builder derives the NSIS uninstall key from the production app ID, ai.awmate.desktop.
       "ProductCode: d074f30d-5f88-5885-b075-be1348cc7676",
       "Protocols:",
       "- opencode",

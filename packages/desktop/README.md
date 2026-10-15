@@ -52,7 +52,7 @@ bun run bench:startup -- --runs 5 --compare dist/other/OpenCode\ Dev.exe   # A/B
 bun run bench:startup -- --service cold                            # each launch spawns the service
 bun run bench:startup -- --fresh                                   # first launch after an install (profile wiped each time)
 bun run bench:startup -- --profile-main --profile-renderer --trace # CPU profiles and a Chromium startup trace
-bun run bench:startup -- --seed "%APPDATA%\ai.opencode.desktop.dev"   # restore tabs and drafts from an existing profile
+bun run bench:startup -- --seed "%APPDATA%\ai.awmate.desktop.dev"   # restore tabs and drafts from an existing profile
 ```
 
 The app runs in an isolated home (`%TEMP%\opencode-bench-startup`): its own `%APPDATA%`, XDG directories, OpenCode
