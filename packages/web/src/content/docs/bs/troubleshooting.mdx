@@ -11,7 +11,7 @@ Da biste otklonili probleme s AWMate, počnite provjeravanjem dnevnika i lokalni
 
 Log fajlovi se pišu na:
 
-- **macOS/Linux**: `~/.local/share/opencode/log/`
+- **macOS/Linux**: `~/.local/share/awmate/log/`
 - **Windows**: Pritisnite `WIN+R` i zalijepite `%USERPROFILE%\.local\share\opencode\log`
 
 Datoteke evidencije se imenuju vremenskim oznakama (npr. `2025-01-09T123456.log`) i čuvaju se najnovijih 10 datoteka dnevnika.
@@ -24,7 +24,7 @@ Možete postaviti nivo dnevnika pomoću opcije komandne linije `--log-level` da 
 
 AWMate pohranjuje podatke o sesiji i druge podatke aplikacije na disku na:
 
-- **macOS/Linux**: `~/.local/share/opencode/`
+- **macOS/Linux**: `~/.local/share/awmate/`
 - **Windows**: Pritisnite `WIN+R` i zalijepite `%USERPROFILE%\.local\share\opencode`
 
 Ovaj direktorij sadrži:
@@ -57,8 +57,8 @@ Ako se desktop aplikacija ruši pri pokretanju, visi ili se čudno ponaša, poč
 
 Otvorite svoju globalnu konfiguracijsku datoteku i potražite ključ `plugin`.
 
-- **macOS/Linux**: `~/.config/opencode/opencode.jsonc` (ili `~/.config/opencode/opencode.json`)
-- **macOS/Linux** (starije instalacije): `~/.local/share/opencode/opencode.jsonc`
+- **macOS/Linux**: `~/.config/awmate/opencode.jsonc` (ili `~/.config/awmate/opencode.json`)
+- **macOS/Linux** (starije instalacije): `~/.local/share/awmate/opencode.jsonc`
 - **Windows**: Pritisnite `WIN+R` i zalijepite `%USERPROFILE%\.config\opencode\opencode.jsonc`
 
 Ako imate konfigurirane dodatke, privremeno ih onemogućite uklanjanjem ključa ili postavljanjem na prazan niz:
@@ -75,7 +75,7 @@ Ako imate konfigurirane dodatke, privremeno ih onemogućite uklanjanjem ključa 
 AWMate također može učitati lokalne dodatke s diska. Privremeno ih maknite s puta (ili preimenujte folder) i ponovo pokrenite desktop aplikaciju:
 
 - **Globalni dodaci**
-  - **macOS/Linux**: `~/.config/opencode/plugins/`
+  - **macOS/Linux**: `~/.config/awmate/plugins/`
   - **Windows**: Pritisnite `WIN+R` i zalijepite `%USERPROFILE%\.config\opencode\plugins`
 - **Projektni dodaci** (samo ako koristite konfiguraciju po projektu)
   - `<your-project>/.opencode/plugins/`
@@ -91,8 +91,8 @@ Ako onemogućavanje dodataka ne pomogne (ili se instalacija dodatka zaglavila), 
 1. Potpuno zatvorite AWMate Desktop.
 2. Izbrišite keš direktorij:
 
-- **macOS**: Finder -> `Cmd+Shift+G` -> zalijepi `~/.cache/opencode`
-- **Linux**: obrišite `~/.cache/opencode` (ili pokrenite `rm -rf ~/.cache/opencode`)
+- **macOS**: Finder -> `Cmd+Shift+G` -> zalijepi `~/.cache/awmate`
+- **Linux**: obrišite `~/.cache/awmate` (ili pokrenite `rm -rf ~/.cache/awmate`)
 - **Windows**: Pritisnite `WIN+R` i zalijepite `%USERPROFILE%\.cache\opencode`
 
 3. Ponovo pokrenite AWMate Desktop.
@@ -241,7 +241,7 @@ Da biste ovo riješili:
 2. Ako se problem nastavi, pokušajte obrisati pohranjenu konfiguraciju:
 
 ```bash
-   rm -rf ~/.local/share/opencode
+   rm -rf ~/.local/share/awmate
 ```
 
 Na Windows-u pritisnite `WIN+R` i izbrišite: `%USERPROFILE%\.local\share\opencode`
@@ -259,7 +259,7 @@ Da biste riješili probleme s paketom dobavljača:
 1. Obrišite keš paketa provajdera:
 
 ```bash
-   rm -rf ~/.cache/opencode
+   rm -rf ~/.cache/awmate
 ```
 
 Na Windows-u pritisnite `WIN+R` i izbrišite: `%USERPROFILE%\.cache\opencode`

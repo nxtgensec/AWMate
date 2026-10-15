@@ -65,7 +65,7 @@ configuration to enforce restrictions.
 Put user settings for every project in the global configuration:
 
 ```text
-~/.config/opencode/opencode.json(c)
+~/.config/awmate/opencode.json(c)
 ```
 
 Put project settings in either of these files:
@@ -85,7 +85,7 @@ For example, start AWMate from `/home/user/projects/acme/packages/web`:
 
 ```text
 /etc/opencode/opencode.json
-~/.config/opencode/opencode.json
+~/.config/awmate/opencode.json
 
 /home/user/projects/acme/
 ├── opencode.json
@@ -97,7 +97,7 @@ For example, start AWMate from `/home/user/projects/acme/packages/web`:
 
 AWMate applies these files from lowest to highest precedence:
 
-1. `~/.config/opencode/opencode.json`
+1. `~/.config/awmate/opencode.json`
 2. `/home/user/projects/acme/opencode.json`
 3. `/home/user/projects/acme/packages/web/opencode.json`
 4. `/etc/opencode/opencode.json`

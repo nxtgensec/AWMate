@@ -25,8 +25,8 @@ function open(page: Page, input: Partial<WorkspaceInput> = {}) {
     project: { icon: { color: "orange", override }, commands: { start: "echo setup" }, sandboxes },
     provider: NO_PROVIDER,
     configEntries: [
-      { type: "document", path: "/home/test/.config/opencode/opencode.jsonc", info: { shell: "/bin/zsh" } },
-      { type: "directory", path: "/home/test/.config/opencode" },
+      { type: "document", path: "/home/test/.config/awmate/opencode.jsonc", info: { shell: "/bin/zsh" } },
+      { type: "directory", path: "/home/test/.config/awmate" },
     ],
     shells: [
       { path: "/bin/zsh", name: "zsh", acceptable: true },

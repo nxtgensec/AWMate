@@ -92,9 +92,9 @@ opencode работает в вашем конвейере GitLab CI/CD. Вот 
       - echo "Configuring glab"
       - echo $GITLAB_HOST
       - echo "Creating AWMate auth configuration"
-      - mkdir --parents ~/.local/share/opencode
+      - mkdir --parents ~/.local/share/awmate
       - |
-        cat > ~/.local/share/opencode/auth.json << EOF
+        cat > ~/.local/share/awmate/auth.json << EOF
         {
           "anthropic": {
             "type": "api",

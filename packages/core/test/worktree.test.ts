@@ -954,7 +954,7 @@ describe("Worktree", () => {
         yield* config.setEntries([
           new Document({
             type: "document",
-            path: abs(path.join(home, ".config/opencode/opencode.json")),
+            path: abs(path.join(home, ".config/awmate/opencode.json")),
             info: new Info({ worktree: { directory } }),
           }),
         ])

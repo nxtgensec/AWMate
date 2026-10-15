@@ -44,7 +44,7 @@ For eksempel, hvis din globale konfigurasjon setter `theme: "opencode"` og `auto
 Konfigurasjonskilder lastes inn i denne rekkefølgen (senere kilder overstyrer tidligere):
 
 1. **Ekstern konfigurasjon** (fra `.well-known/opencode`) - organisasjonsstandarder
-2. **Global konfigurasjon** (`~/.config/opencode/opencode.json`) - brukerinnstillinger
+2. **Global konfigurasjon** (`~/.config/awmate/opencode.json`) - brukerinnstillinger
 3. **Egendefinert konfigurasjon** (`OPENCODE_CONFIG` env var) - egendefinerte overstyringer
 4. **Prosjektkonfigurasjon** (`opencode.json` i prosjekt) - prosjektspesifikke innstillinger
 5. **`.opencode` kataloger** - agenter, kommandoer, plugins
@@ -53,7 +53,7 @@ Konfigurasjonskilder lastes inn i denne rekkefølgen (senere kilder overstyrer t
 Dette betyr at prosjektkonfigurasjoner kan overstyre globale standardinnstillinger, og globale konfigurasjoner kan overstyre eksterne organisasjonsstandarder.
 
 :::note
-`.opencode` og `~/.config/opencode` katalogene bruker **flertallsnavn** på underkataloger: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/` og `themes/`. Enkeltnavn (f.eks. `agent/`) støttes også for bakoverkompatibilitet.
+`.opencode` og `~/.config/awmate` katalogene bruker **flertallsnavn** på underkataloger: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/` og `themes/`. Enkeltnavn (f.eks. `agent/`) støttes også for bakoverkompatibilitet.
 :::
 
 ---
@@ -96,7 +96,7 @@ Du kan aktivere spesifikke servere i din lokale konfigurasjon:
 
 ### Global konfigurasjon
 
-Plasser din globale OpenCode-konfigurasjon i `~/.config/opencode/opencode.json`. Bruk global konfigurasjon for brukerspesifikke preferanser som temaer, leverandører eller nøkkelbindinger.
+Plasser din globale OpenCode-konfigurasjon i `~/.config/awmate/opencode.json`. Bruk global konfigurasjon for brukerspesifikke preferanser som temaer, leverandører eller nøkkelbindinger.
 
 Global konfigurasjon overstyrer eksterne organisasjonsstandarder.
 
@@ -337,7 +337,7 @@ Du kan konfigurere spesialiserte agenter for spesifikke oppgaver gjennom alterna
 }
 ```
 
-Du kan også definere agenter ved å bruke markdown-filer i `~/.config/opencode/agents/` eller `.opencode/agents/`. [Les mer her](/docs/agents).
+Du kan også definere agenter ved å bruke markdown-filer i `~/.config/awmate/agents/` eller `.opencode/agents/`. [Les mer her](/docs/agents).
 
 ---
 
@@ -401,7 +401,7 @@ Du kan konfigurere egendefinerte kommandoer for repeterende oppgaver gjennom alt
 }
 ```
 
-Du kan også definere kommandoer ved å bruke markdown-filer i `~/.config/opencode/commands/` eller `.opencode/commands/`. [Les mer her](/docs/commands).
+Du kan også definere kommandoer ved å bruke markdown-filer i `~/.config/awmate/commands/` eller `.opencode/commands/`. [Les mer her](/docs/commands).
 
 ---
 
@@ -539,7 +539,7 @@ Du kan konfigurere MCP-servere du vil bruke gjennom alternativet `mcp`.
 
 [Plugins](/docs/plugins) utvider AWMate med tilpassede verktøy, kroker og integrasjoner.
 
-Plasser plugin-filer i `.opencode/plugins/` eller `~/.config/opencode/plugins/`. Du kan også laste inn plugins fra npm gjennom alternativet `plugin`.
+Plasser plugin-filer i `.opencode/plugins/` eller `~/.config/awmate/plugins/`. Du kan også laste inn plugins fra npm gjennom alternativet `plugin`.
 
 ```json title="opencode.json"
 {

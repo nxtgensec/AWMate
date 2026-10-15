@@ -11,7 +11,7 @@ description: 常见问题及其解决方法。
 
 日志文件写入位置：
 
-- **macOS/Linux**: `~/.local/share/opencode/log/`
+- **macOS/Linux**: `~/.local/share/awmate/log/`
 - **Windows**: 按 `WIN+R` 并粘贴 `%USERPROFILE%\.local\share\opencode\log`
 
 日志文件以时间戳命名（例如 `2025-01-09T123456.log`），并保留最近的 10 个日志文件。
@@ -24,7 +24,7 @@ description: 常见问题及其解决方法。
 
 AWMate 将会话数据和其他应用数据存储在磁盘上：
 
-- **macOS/Linux**: `~/.local/share/opencode/`
+- **macOS/Linux**: `~/.local/share/awmate/`
 - **Windows**: 按 `WIN+R` 并粘贴 `%USERPROFILE%\.local\share\opencode`
 
 该目录包含：
@@ -57,8 +57,8 @@ OpenCode Desktop 会在后台运行一个本地 OpenCode 服务器（即 `openco
 
 打开你的全局配置文件，查找 `plugin` 键。
 
-- **macOS/Linux**: `~/.config/opencode/opencode.jsonc`（或 `~/.config/opencode/opencode.json`）
-- **macOS/Linux**（旧版安装）: `~/.local/share/opencode/opencode.jsonc`
+- **macOS/Linux**: `~/.config/awmate/opencode.jsonc`（或 `~/.config/awmate/opencode.json`）
+- **macOS/Linux**（旧版安装）: `~/.local/share/awmate/opencode.jsonc`
 - **Windows**: 按 `WIN+R` 并粘贴 `%USERPROFILE%\.config\opencode\opencode.jsonc`
 
 如果你配置了插件，请通过移除该键或将其设置为空数组来临时禁用它们：
@@ -75,7 +75,7 @@ OpenCode Desktop 会在后台运行一个本地 OpenCode 服务器（即 `openco
 AWMate 还可以从磁盘加载本地插件。临时将这些插件移走（或重命名文件夹），然后重新启动桌面应用：
 
 - **全局插件**
-  - **macOS/Linux**: `~/.config/opencode/plugins/`
+  - **macOS/Linux**: `~/.config/awmate/plugins/`
   - **Windows**: 按 `WIN+R` 并粘贴 `%USERPROFILE%\.config\opencode\plugins`
 - **项目插件**（仅当你使用了项目级配置时）
   - `<your-project>/.opencode/plugins/`
@@ -91,8 +91,8 @@ AWMate 还可以从磁盘加载本地插件。临时将这些插件移走（或�
 1. 完全退出 AWMate Desktop。
 2. 删除缓存目录：
 
-- **macOS**: Finder -> `Cmd+Shift+G` -> 粘贴 `~/.cache/opencode`
-- **Linux**: 删除 `~/.cache/opencode`（或运行 `rm -rf ~/.cache/opencode`）
+- **macOS**: Finder -> `Cmd+Shift+G` -> 粘贴 `~/.cache/awmate`
+- **Linux**: 删除 `~/.cache/awmate`（或运行 `rm -rf ~/.cache/awmate`）
 - **Windows**: 按 `WIN+R` 并粘贴 `%USERPROFILE%\.cache\opencode`
 
 3. 重新启动 AWMate Desktop。
@@ -240,7 +240,7 @@ AWMate Desktop 仅在以下情况下显示系统通知：
 2. 如果问题仍然存在，请尝试清除已存储的配置：
 
    ```bash
-   rm -rf ~/.local/share/opencode
+   rm -rf ~/.local/share/awmate
    ```
 
    在 Windows 上，按 `WIN+R` 并删除：`%USERPROFILE%\.local\share\opencode`
@@ -258,7 +258,7 @@ AWMate Desktop 仅在以下情况下显示系统通知：
 1. 清除提供商包缓存：
 
    ```bash
-   rm -rf ~/.cache/opencode
+   rm -rf ~/.cache/awmate
    ```
 
    在 Windows 上，按 `WIN+R` 并删除：`%USERPROFILE%\.cache\opencode`

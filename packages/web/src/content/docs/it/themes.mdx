@@ -83,7 +83,7 @@ AWMate supporta un sistema di temi flessibile basato su JSON che permette di cre
 I temi vengono caricati da più directory nel seguente ordine, dove le directory successive sovrascrivono le precedenti:
 
 1. **Temi integrati** - incorporati nel binario
-2. **Directory di configurazione utente** - in `~/.config/opencode/themes/*.json` o `$XDG_CONFIG_HOME/opencode/themes/*.json`
+2. **Directory di configurazione utente** - in `~/.config/awmate/themes/*.json` o `$XDG_CONFIG_HOME/awmate/themes/*.json`
 3. **Directory root del progetto** - in `<project-root>/.opencode/themes/*.json`
 4. **Directory di lavoro corrente** - in `./.opencode/themes/*.json`
 
@@ -98,8 +98,8 @@ Per creare un tema personalizzato, crea un file JSON in una delle directory dei 
 Per temi a livello utente:
 
 ```bash no-frame
-mkdir -p ~/.config/opencode/themes
-vim ~/.config/opencode/themes/my-theme.json
+mkdir -p ~/.config/awmate/themes
+vim ~/.config/awmate/themes/my-theme.json
 ```
 
 E per temi specifici del progetto.

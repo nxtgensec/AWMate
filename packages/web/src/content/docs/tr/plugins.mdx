@@ -20,7 +20,7 @@ Eklentileri yüklemenin iki yolu vardır.
 JavaScript veya TypeScript dosyalarını eklenti dizinine yerleştirin.
 
 - `.opencode/plugins/` - Proje düzeyinde eklentiler
-- `~/.config/opencode/plugins/` - Genel eklentiler
+- `~/.config/awmate/plugins/` - Genel eklentiler
 
 Bu dizinlerdeki dosyalar başlangıçta otomatik olarak yüklenir.
 
@@ -45,7 +45,7 @@ Hem normal hem de kapsamlı npm paketleri desteklenir.
 
 ### Eklentiler nasıl kurulur?
 
-**npm eklentileri** başlangıçta Bun kullanılarak otomatik olarak yüklenir. Paketler ve bağımlılıkları `~/.cache/opencode/node_modules/`'da önbelleğe alınır.
+**npm eklentileri** başlangıçta Bun kullanılarak otomatik olarak yüklenir. Paketler ve bağımlılıkları `~/.cache/awmate/node_modules/`'da önbelleğe alınır.
 
 **Yerel eklentiler** doğrudan eklenti dizininden yüklenir. Harici paketleri kullanmak için, sisteminizin dizininde bir `package.json` oluşturmanız (bkz. [Bağımlılıklar](#dependencies)) veya eklentiyi npm ve [yapılandırmanıza eklemeniz](/docs/config#plugins) gerekir.
 
@@ -55,9 +55,9 @@ Hem normal hem de kapsamlı npm paketleri desteklenir.
 
 Eklentiler tüm kaynaklardan yüklenir ve tüm kancalar sırayla çalışır. Yükleme sırası şöyledir:
 
-1. Global config (`~/.config/opencode/opencode.json`)
+1. Global config (`~/.config/awmate/opencode.json`)
 2. Project config (`opencode.json`)
-3. Global eklenti dizini (`~/.config/opencode/plugins/`)
+3. Global eklenti dizini (`~/.config/awmate/plugins/`)
 4. Proje eklenti dizini (`.opencode/plugins/`)
 
 Aynı ad ve sürüme sahip yinelenen npm paketleri bir kez yüklenir. Ancak benzer adlara sahip bir yerel eklenti ve bir npm eklentisinin her ikisi de ayrı ayrı yüklenir.

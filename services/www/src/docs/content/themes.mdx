@@ -5,7 +5,7 @@ title: "Themes"
 Choose a theme from the terminal UI by pressing `Ctrl+P`, selecting **Open settings**, and opening **Theme**. You can also
 set it directly in your global CLI config:
 
-```json title="~/.config/opencode/cli.json"
+```json title="~/.config/awmate/cli.json"
 {
   "theme": {
     "name": "tokyonight",
@@ -21,7 +21,7 @@ Themes belong to the terminal client. Put theme selection in `cli.json`, not `op
 
 Use `system` to follow your terminal's appearance, or lock the theme to one mode:
 
-```json title="~/.config/opencode/cli.json"
+```json title="~/.config/awmate/cli.json"
 {
   "theme": {
     "name": "opencode",
@@ -42,7 +42,7 @@ If a custom theme provides only one mode, AWMate uses that mode when the other i
 
 Select a built-in theme by its name:
 
-```json title="~/.config/opencode/cli.json"
+```json title="~/.config/awmate/cli.json"
 {
   "theme": {
     "name": "catppuccin"
@@ -65,7 +65,7 @@ The `system` theme is available when AWMate can read your terminal palette.
 To create a global theme named `ocean`, use the theme tool to generate a complete file in the global theme directory.
 Its relevant structure looks like this:
 
-```json title="~/.config/opencode/themes/ocean.json (excerpt)"
+```json title="~/.config/awmate/themes/ocean.json (excerpt)"
 {
   "base": {
     "text": {
@@ -85,7 +85,7 @@ theme name.
 
 | Scope   | Directory                                  |
 | ------- | ------------------------------------------ |
-| Global  | `~/.config/opencode/themes/`               |
+| Global  | `~/.config/awmate/themes/`               |
 | Project | `.opencode/themes/` in the project tree    |
 
 AWMate reads `.json` files only. A theme closer to the current directory replaces a global or parent theme with the

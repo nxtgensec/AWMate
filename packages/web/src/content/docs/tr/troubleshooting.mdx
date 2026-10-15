@@ -11,7 +11,7 @@ opencode ile ilgili bir sorunu ayiklamak icin once loglari ve diskte tuttugu yer
 
 Log dosyalari su konuma yazilir:
 
-- **macOS/Linux**: `~/.local/share/opencode/log/`
+- **macOS/Linux**: `~/.local/share/awmate/log/`
 - **Windows**: `WIN+R` tuslayip `%USERPROFILE%\.local\share\opencode\log` yapistirin
 
 Log dosyalari zaman damgasiyla adlandirilir (ornegin `2025-01-09T123456.log`) ve en yeni 10 log dosyasi tutulur.
@@ -24,7 +24,7 @@ Daha ayrintili ayiklama bilgisi icin `--log-level` komut satiri secenegini kulla
 
 opencode, oturum verilerini ve diger uygulama verilerini diskte su konumda saklar:
 
-- **macOS/Linux**: `~/.local/share/opencode/`
+- **macOS/Linux**: `~/.local/share/awmate/`
 - **Windows**: `WIN+R` tuslayip `%USERPROFILE%\.local\share\opencode` yapistirin
 
 Bu dizin sunlari icerir:
@@ -57,8 +57,8 @@ Desktop uygulamasi acilista cokuyorsa, takiliyorsa veya garip davranislar goster
 
 Global config dosyanizi acin ve `plugin` anahtarini arayin.
 
-- **macOS/Linux**: `~/.config/opencode/opencode.jsonc` (veya `~/.config/opencode/opencode.json`)
-- **macOS/Linux** (eski kurulumlar): `~/.local/share/opencode/opencode.jsonc`
+- **macOS/Linux**: `~/.config/awmate/opencode.jsonc` (veya `~/.config/awmate/opencode.json`)
+- **macOS/Linux** (eski kurulumlar): `~/.local/share/awmate/opencode.jsonc`
 - **Windows**: `WIN+R` tuslayip `%USERPROFILE%\.config\opencode\opencode.jsonc` yapistirin
 
 Plugin tanimliysa anahtari kaldirarak veya bos bir diziye cekerek gecici olarak devre disi birakin:
@@ -75,7 +75,7 @@ Plugin tanimliysa anahtari kaldirarak veya bos bir diziye cekerek gecici olarak 
 opencode diskten yerel plugin de yukleyebilir. Bu dizinleri gecici olarak tasiyin (veya klasoru yeniden adlandirin) ve uygulamayi yeniden baslatin:
 
 - **Global plugins**
-  - **macOS/Linux**: `~/.config/opencode/plugins/`
+  - **macOS/Linux**: `~/.config/awmate/plugins/`
   - **Windows**: `WIN+R` tuslayip `%USERPROFILE%\.config\opencode\plugins` yapistirin
 - **Project plugins** (sadece proje bazli config kullaniyorsaniz)
   - `<your-project>/.opencode/plugins/`
@@ -91,8 +91,8 @@ Pluginleri kapatmak ise yaramazsa (veya plugin kurulumu takili kaldiysa), openco
 1. opencode Desktop'u tamamen kapatin
 2. Cache dizinini silin:
 
-- **macOS**: Finder -> `Cmd+Shift+G` -> `~/.cache/opencode`
-- **Linux**: `~/.cache/opencode` dizinini silin (veya `rm -rf ~/.cache/opencode` calistirin)
+- **macOS**: Finder -> `Cmd+Shift+G` -> `~/.cache/awmate`
+- **Linux**: `~/.cache/awmate` dizinini silin (veya `rm -rf ~/.cache/awmate` calistirin)
 - **Windows**: `WIN+R` tuslayip `%USERPROFILE%\.cache\opencode` yapistirin
 
 3. opencode Desktop'u yeniden baslatin
@@ -240,7 +240,7 @@ Cozum adimlari:
 2. Sorun surerse kayitli konfigurasyonu temizlemeyi deneyin:
 
    ```bash
-   rm -rf ~/.local/share/opencode
+   rm -rf ~/.local/share/awmate
    ```
 
    Windows'ta `WIN+R` tuslayip su konumu silin: `%USERPROFILE%\.local\share\opencode`
@@ -258,7 +258,7 @@ Provider paket sorunlarini gidermek icin:
 1. Provider paket cache'ini temizleyin:
 
    ```bash
-   rm -rf ~/.cache/opencode
+   rm -rf ~/.cache/awmate
    ```
 
    Windows'ta `WIN+R` tuslayip su konumu silin: `%USERPROFILE%\.cache\opencode`

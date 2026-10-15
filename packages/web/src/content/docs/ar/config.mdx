@@ -43,7 +43,7 @@ description: استخدام ملف إعدادات AWMate بصيغة JSON.
 تُحمَّل مصادر الإعدادات بهذا الترتيب (المصادر اللاحقة تتجاوز السابقة):
 
 1. **الإعدادات البعيدة** (من `.well-known/opencode`) - الإعدادات الافتراضية على مستوى المؤسسة
-2. **الإعدادات العامة** (`~/.config/opencode/opencode.json`) - تفضيلات المستخدم
+2. **الإعدادات العامة** (`~/.config/awmate/opencode.json`) - تفضيلات المستخدم
 3. **إعدادات مخصصة** (`OPENCODE_CONFIG` env var) - تجاوزات مخصصة
 4. **إعدادات المشروع** (`opencode.json` داخل المشروع) - إعدادات خاصة بالمشروع
 5. **أدلة `.opencode`** - الوكلاء، الأوامر، الإضافات
@@ -52,7 +52,7 @@ description: استخدام ملف إعدادات AWMate بصيغة JSON.
 هذا يعني أن إعدادات المشروع يمكنها تجاوز الإعدادات العامة، وأن الإعدادات العامة يمكنها تجاوز الإعدادات الافتراضية البعيدة على مستوى المؤسسة.
 
 :::note
-يستخدم الدليلان `.opencode` و`~/.config/opencode` **أسماء جمع** للأدلة الفرعية: `agents/` و`commands/` و`modes/` و`plugins/` و`skills/` و`tools/` و`themes/`. كما تُدعَم أسماء المفرد (مثل `agent/`) للتوافق مع الإصدارات السابقة.
+يستخدم الدليلان `.opencode` و`~/.config/awmate` **أسماء جمع** للأدلة الفرعية: `agents/` و`commands/` و`modes/` و`plugins/` و`skills/` و`tools/` و`themes/`. كما تُدعَم أسماء المفرد (مثل `agent/`) للتوافق مع الإصدارات السابقة.
 :::
 
 ---
@@ -95,7 +95,7 @@ description: استخدام ملف إعدادات AWMate بصيغة JSON.
 
 ### عام
 
-ضع إعدادات OpenCode العامة في `~/.config/opencode/opencode.json`. استخدم الإعدادات العامة للتفضيلات على مستوى المستخدم مثل السمات، والمزوّدين، أو اختصارات المفاتيح.
+ضع إعدادات OpenCode العامة في `~/.config/awmate/opencode.json`. استخدم الإعدادات العامة للتفضيلات على مستوى المستخدم مثل السمات، والمزوّدين، أو اختصارات المفاتيح.
 
 تتجاوز الإعدادات العامة القيم الافتراضية البعيدة الخاصة بالمؤسسة.
 
@@ -335,7 +335,7 @@ opencode run "Hello world"
 }
 ```
 
-يمكنك أيضًا تعريف الوكلاء باستخدام ملفات markdown في `~/.config/opencode/agents/` أو `.opencode/agents/`. [تعرف على المزيد هنا](/docs/agents).
+يمكنك أيضًا تعريف الوكلاء باستخدام ملفات markdown في `~/.config/awmate/agents/` أو `.opencode/agents/`. [تعرف على المزيد هنا](/docs/agents).
 
 ---
 
@@ -399,7 +399,7 @@ opencode run "Hello world"
 }
 ```
 
-يمكنك أيضًا تعريف الأوامر باستخدام ملفات markdown في `~/.config/opencode/commands/` أو `.opencode/commands/`. [تعرف على المزيد هنا](/docs/commands).
+يمكنك أيضًا تعريف الأوامر باستخدام ملفات markdown في `~/.config/awmate/commands/` أو `.opencode/commands/`. [تعرف على المزيد هنا](/docs/commands).
 
 ---
 
@@ -536,7 +536,7 @@ opencode run "Hello world"
 
 [الإضافات](/docs/plugins) توسّع AWMate بأدوات وخُطافات وتكاملات مخصصة.
 
-ضع ملفات الإضافات في `.opencode/plugins/` أو `~/.config/opencode/plugins/`. يمكنك أيضًا تحميل إضافات من npm عبر الخيار `plugin`.
+ضع ملفات الإضافات في `.opencode/plugins/` أو `~/.config/awmate/plugins/`. يمكنك أيضًا تحميل إضافات من npm عبر الخيار `plugin`.
 
 ```json title="opencode.json"
 {

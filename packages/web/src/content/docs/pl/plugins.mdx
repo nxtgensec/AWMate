@@ -20,7 +20,7 @@ Istnieją dwa sposoby ładowania wtyczek.
 Miejsce plików JavaScript lub TypeScript w katalogu wtyczki.
 
 - `.opencode/plugins/` - Wtyczki na poziomie projektu
-- `~/.config/opencode/plugins/` - Wtyczki globalne
+- `~/.config/awmate/plugins/` - Wtyczki globalne
 
 Pliki w tych katalogach są automatycznie ładowane podczas uruchamiania.
 
@@ -45,7 +45,7 @@ Przeglądaj dostępną wtyczkę w [ekosystemie](/docs/ecosystem#plugins).
 
 ### Sposób instalacji wtyczek
 
-**wtyczki npm** są instalowane automatycznie przy użyciu Bun podczas uruchamiania. Pakiety i ich zależności są buforowane w `~/.cache/opencode/node_modules/`.
+**wtyczki npm** są instalowane automatycznie przy użyciu Bun podczas uruchamiania. Pakiety i ich zależności są buforowane w `~/.cache/awmate/node_modules/`.
 
 **Wtyczki lokalne** są ładowane bezpośrednio z katalogu wtyczek. Aby uzyskać dostęp do zewnętrznych pakietów, musisz zainstalować `package.json` w swoim katalogu konfiguracyjnym (zobacz [Zależności](#dependencies)) lub opublikować wtyczkę w npm i [dodaj ją do swojej konfiguracji](/docs/config#plugins).
 
@@ -55,9 +55,9 @@ Przeglądaj dostępną wtyczkę w [ekosystemie](/docs/ecosystem#plugins).
 
 Wtyczki są ładowane ze wszystkich źródeł, a wszystkie hooki napisane po kolei. Kolejność ładowania do:
 
-1. Konfiguracja globalna (`~/.config/opencode/opencode.json`)
+1. Konfiguracja globalna (`~/.config/awmate/opencode.json`)
 2. Konfiguracja projektu (`opencode.json`)
-3. Globalny katalog wtyczek (`~/.config/opencode/plugins/`)
+3. Globalny katalog wtyczek (`~/.config/awmate/plugins/`)
 4. Katalog wtyczek projektu (`.opencode/plugins/`)
 
 Zduplikowane pakiety npm o tej samej nazwie i wersji są ładowane raz. Równie ważny jest dostęp lokalny i zewnętrzny npm o dodatkowych nazwach, które są zewnętrzne.

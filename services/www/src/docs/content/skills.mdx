@@ -42,7 +42,7 @@ AWMate automatically searches these locations:
 
 | Scope                 | Sources                                |
 | --------------------- | -------------------------------------- |
-| Global                | `~/.config/opencode/skills`            |
+| Global                | `~/.config/awmate/skills`            |
 | Global compatibility  | `~/.claude/skills`, `~/.agents/skills` |
 | Project               | `.opencode/skills`                     |
 | Project compatibility | `.claude/skills`, `.agents/skills`     |
@@ -161,7 +161,7 @@ V2 currently does not enforce this pattern, the 1–64 character recommendation,
 Skills are selected by ID. If two sources define `git-release`, the source registered later supplies the skill that AWMate loads:
 
 ```text
-~/.config/opencode/skills/git-release/SKILL.md  ← lower precedence
+~/.config/awmate/skills/git-release/SKILL.md  ← lower precedence
 .opencode/skills/git-release/SKILL.md           ← loaded
 ```
 
@@ -170,7 +170,7 @@ Sources are registered from lower to higher precedence:
 1. Built-in skills
 2. `.claude/skills`, global first and then from the farthest ancestor toward the current directory
 3. `.agents/skills`, global first and then from the farthest ancestor toward the current directory
-4. `~/.config/opencode/skills`
+4. `~/.config/awmate/skills`
 5. Project `.opencode/skills`, from the project root toward the current directory
 6. Explicit `skills` config entries, in config priority and array order
 

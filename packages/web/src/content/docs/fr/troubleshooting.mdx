@@ -11,7 +11,7 @@ Pour déboguer les problèmes avec AWMate, commencez par vérifier les journaux 
 
 Les fichiers journaux sont écrits dans :
 
-- **macOS/Linux** : `~/.local/share/opencode/log/`
+- **macOS/Linux** : `~/.local/share/awmate/log/`
 - **Windows** : appuyez sur `WIN+R` et collez `%USERPROFILE%\.local\share\opencode\log`
 
 Les fichiers journaux sont nommés avec des horodatages (par exemple, `2025-01-09T123456.log`) et les 10 fichiers journaux les plus récents sont conservés.
@@ -24,7 +24,7 @@ Vous pouvez définir le niveau de journalisation avec l'option de ligne de comma
 
 opencode stocke les données de session et autres données d'application sur le disque à l'emplacement :
 
-- **macOS/Linux** : `~/.local/share/opencode/`
+- **macOS/Linux** : `~/.local/share/awmate/`
 - **Windows** : appuyez sur `WIN+R` et collez `%USERPROFILE%\.local\share\opencode`
 
 Ce répertoire contient :
@@ -57,8 +57,8 @@ Si l'application de bureau plante au lancement, se bloque ou se comporte étrang
 
 Ouvrez votre fichier de configuration global et recherchez une clé `plugin`.
 
-- **macOS/Linux** : `~/.config/opencode/opencode.jsonc` (ou `~/.config/opencode/opencode.json`)
-- **macOS/Linux** (anciennes installations) : `~/.local/share/opencode/opencode.jsonc`
+- **macOS/Linux** : `~/.config/awmate/opencode.jsonc` (ou `~/.config/awmate/opencode.json`)
+- **macOS/Linux** (anciennes installations) : `~/.local/share/awmate/opencode.jsonc`
 - **Windows** : appuyez sur `WIN+R` et collez `%USERPROFILE%\.config\opencode\opencode.jsonc`
 
 Si vous avez configuré des plugins, désactivez-les temporairement en supprimant la clé ou en la définissant sur un tableau vide :
@@ -75,7 +75,7 @@ Si vous avez configuré des plugins, désactivez-les temporairement en suppriman
 AWMate peut également charger des plugins locaux à partir du disque. Écartez-les temporairement (ou renommez le dossier) et redémarrez l'application de bureau :
 
 - **Plugins mondiaux**
-  - **macOS/Linux** : `~/.config/opencode/plugins/`
+  - **macOS/Linux** : `~/.config/awmate/plugins/`
   - **Windows** : appuyez sur `WIN+R` et collez `%USERPROFILE%\.config\opencode\plugins`
 - **Plugins de projet** (uniquement si vous utilisez une configuration par projet)
   - `<your-project>/.opencode/plugins/`
@@ -91,8 +91,8 @@ Si la désactivation des plugins ne résout pas le problème (ou si l'installati
 1. Quittez complètement AWMate Desktop.
 2. Supprimez le répertoire cache :
 
-- **macOS** : Finder -> `Cmd+Shift+G` -> coller `~/.cache/opencode`
-- **Linux** : supprimez `~/.cache/opencode` (ou exécutez `rm -rf ~/.cache/opencode`)
+- **macOS** : Finder -> `Cmd+Shift+G` -> coller `~/.cache/awmate`
+- **Linux** : supprimez `~/.cache/awmate` (ou exécutez `rm -rf ~/.cache/awmate`)
 - **Windows** : appuyez sur `WIN+R` et collez `%USERPROFILE%\.cache\opencode`
 
 3. Redémarrez le bureau AWMate.
@@ -241,7 +241,7 @@ Pour résoudre ce problème :
 2. Si le problème persiste, essayez d'effacer votre configuration stockée :
 
    ```bash
-   rm -rf ~/.local/share/opencode
+   rm -rf ~/.local/share/awmate
    ```
 
 Sur Windows, appuyez sur `WIN+R` et supprimez : `%USERPROFILE%\.local\share\opencode`
@@ -259,7 +259,7 @@ Pour résoudre les problèmes liés au package du fournisseur :
 1. Videz le cache du package du fournisseur :
 
    ```bash
-   rm -rf ~/.cache/opencode
+   rm -rf ~/.cache/awmate
    ```
 
 Sur Windows, appuyez sur `WIN+R` et supprimez : `%USERPROFILE%\.cache\opencode`

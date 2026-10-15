@@ -584,7 +584,7 @@ test.describe("remote configuration", () => {
 
   test("remote servers copy each service's configuration path", async ({ page }) => {
     const remote = "http://summary-remote.test:4096"
-    const home = "/home/remote/.config/opencode"
+    const home = "/home/remote/.config/awmate"
 
     const entries = [
       { type: "document", path: `${home}/mcp.jsonc`, info: { mcp: { servers: {} } } },

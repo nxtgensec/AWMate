@@ -20,7 +20,7 @@ Ci sono due modi per caricare i plugin.
 Metti file JavaScript o TypeScript nella directory dei plugin.
 
 - `.opencode/plugins/` - plugin a livello progetto
-- `~/.config/opencode/plugins/` - plugin globali
+- `~/.config/awmate/plugins/` - plugin globali
 
 I file in queste directory vengono caricati automaticamente all'avvio.
 
@@ -45,7 +45,7 @@ Sfoglia i plugin disponibili nell'[ecosistema](/docs/ecosystem#plugins).
 
 ### Come vengono installati i plugin
 
-I **plugin npm** vengono installati automaticamente usando Bun all'avvio. I pacchetti e le loro dipendenze vengono cache-ati in `~/.cache/opencode/node_modules/`.
+I **plugin npm** vengono installati automaticamente usando Bun all'avvio. I pacchetti e le loro dipendenze vengono cache-ati in `~/.cache/awmate/node_modules/`.
 
 I **plugin locali** vengono caricati direttamente dalla directory dei plugin. Per usare pacchetti esterni, devi creare un `package.json` nella directory di configurazione (vedi [Dipendenze](#dependencies)) oppure pubblicare il plugin su npm e [aggiungerlo alla configurazione](/docs/config#plugins).
 
@@ -55,9 +55,9 @@ I **plugin locali** vengono caricati direttamente dalla directory dei plugin. Pe
 
 I plugin vengono caricati da tutte le sorgenti e tutti gli hook vengono eseguiti in sequenza. L'ordine di caricamento è:
 
-1. Config globale (`~/.config/opencode/opencode.json`)
+1. Config globale (`~/.config/awmate/opencode.json`)
 2. Config di progetto (`opencode.json`)
-3. Directory plugin globale (`~/.config/opencode/plugins/`)
+3. Directory plugin globale (`~/.config/awmate/plugins/`)
 4. Directory plugin di progetto (`.opencode/plugins/`)
 
 I pacchetti npm duplicati con lo stesso nome e versione vengono caricati una sola volta. Tuttavia, un plugin locale e un plugin npm con nomi simili vengono entrambi caricati separatamente.

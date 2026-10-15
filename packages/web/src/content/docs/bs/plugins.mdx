@@ -17,7 +17,7 @@ Postoje dva načina za učitavanje dodataka.
 Postavite JavaScript ili TypeScript datoteke u direktorij dodataka.
 
 - `.opencode/plugins/` - Dodaci na nivou projekta
-- `~/.config/opencode/plugins/` - Globalni dodaci
+- `~/.config/awmate/plugins/` - Globalni dodaci
   Datoteke u ovim direktorijumima se automatski učitavaju pri pokretanju.
 
 ---
@@ -40,7 +40,7 @@ Pregledajte dostupne dodatke u [ecosystem](/docs/ecosystem#plugins).
 
 ### Kako se instaliraju dodaci
 
-**npm dodaci** se instaliraju automatski pomoću Bun pri pokretanju. Paketi i njihove zavisnosti su keširani u `~/.cache/opencode/node_modules/`.
+**npm dodaci** se instaliraju automatski pomoću Bun pri pokretanju. Paketi i njihove zavisnosti su keširani u `~/.cache/awmate/node_modules/`.
 **Lokalni dodaci** se učitavaju direktno iz direktorija dodataka. Da biste koristili vanjske pakete, morate kreirati `package.json` unutar svog konfiguracijskog direktorija (pogledajte [Zavisnosti](#dependencies)) ili objaviti dodatak na npm i [dodati ga u svoju konfiguraciju](/docs/config#plugins).
 
 ---
@@ -49,9 +49,9 @@ Pregledajte dostupne dodatke u [ecosystem](/docs/ecosystem#plugins).
 
 Dodaci se učitavaju iz svih izvora i svi zakačnjaci rade u nizu. Redoslijed učitavanja je:
 
-1. Globalna konfiguracija (`~/.config/opencode/opencode.json`)
+1. Globalna konfiguracija (`~/.config/awmate/opencode.json`)
 2. Konfiguracija projekta (`opencode.json`)
-3. Globalni direktorij dodataka (`~/.config/opencode/plugins/`)
+3. Globalni direktorij dodataka (`~/.config/awmate/plugins/`)
 4. Direktorij dodataka projekta (`.opencode/plugins/`)
    Duplicirani npm paketi sa istim imenom i verzijom se učitavaju jednom. Međutim, lokalni dodatak i npm dodatak sa sličnim nazivima se učitavaju odvojeno.
 

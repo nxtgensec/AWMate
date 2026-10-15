@@ -91,9 +91,9 @@ AWMate 在您的 GitLab CI/CD 管線中執行，以下是設定所需的步驟�
       - echo "Configuring glab"
       - echo $GITLAB_HOST
       - echo "Creating AWMate auth configuration"
-      - mkdir --parents ~/.local/share/opencode
+      - mkdir --parents ~/.local/share/awmate
       - |
-        cat > ~/.local/share/opencode/auth.json << EOF
+        cat > ~/.local/share/awmate/auth.json << EOF
         {
           "anthropic": {
             "type": "api",

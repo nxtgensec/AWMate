@@ -44,7 +44,7 @@ For example, if your global config sets `autoupdate: true` and your project conf
 Config sources are loaded in this order (later sources override earlier ones):
 
 1. **Remote config** (from `.well-known/opencode`) - organizational defaults
-2. **Global config** (`~/.config/opencode/opencode.json`) - user preferences
+2. **Global config** (`~/.config/awmate/opencode.json`) - user preferences
 3. **Custom config** (`OPENCODE_CONFIG` env var) - custom overrides
 4. **Project config** (`opencode.json` in project) - project-specific settings
 5. **`.opencode` directories** - agents, commands, plugins
@@ -55,7 +55,7 @@ Config sources are loaded in this order (later sources override earlier ones):
 This means project configs can override global defaults, and global configs can override remote organizational defaults. Managed settings override everything.
 
 :::note
-The `.opencode` and `~/.config/opencode` directories use **plural names** for subdirectories: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/`, and `themes/`. Singular names (e.g., `agent/`) are also supported for backwards compatibility.
+The `.opencode` and `~/.config/awmate` directories use **plural names** for subdirectories: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/`, and `themes/`. Singular names (e.g., `agent/`) are also supported for backwards compatibility.
 :::
 
 ---
@@ -98,9 +98,9 @@ You can enable specific servers in your local config:
 
 ### Global
 
-Place your global OpenCode config in `~/.config/opencode/opencode.json`. Use global config for user-wide server/runtime preferences like providers, models, and permissions.
+Place your global OpenCode config in `~/.config/awmate/opencode.json`. Use global config for user-wide server/runtime preferences like providers, models, and permissions.
 
-For TUI-specific settings, use `~/.config/opencode/tui.json`.
+For TUI-specific settings, use `~/.config/awmate/tui.json`.
 
 Global config overrides remote organizational defaults.
 
@@ -524,7 +524,7 @@ You can configure specialized agents for specific tasks through the `agent` opti
 }
 ```
 
-You can also define agents using markdown files in `~/.config/opencode/agents/` or `.opencode/agents/`. [Learn more here](/docs/agents).
+You can also define agents using markdown files in `~/.config/awmate/agents/` or `.opencode/agents/`. [Learn more here](/docs/agents).
 
 ---
 
@@ -603,7 +603,7 @@ You can configure custom commands for repetitive tasks through the `command` opt
 }
 ```
 
-You can also define commands using markdown files in `~/.config/opencode/commands/` or `.opencode/commands/`. [Learn more here](/docs/commands).
+You can also define commands using markdown files in `~/.config/awmate/commands/` or `.opencode/commands/`. [Learn more here](/docs/commands).
 
 ---
 
@@ -799,7 +799,7 @@ You can configure MCP servers you want to use through the `mcp` option.
 
 [Plugins](/docs/plugins) extend AWMate with custom tools, hooks, and integrations.
 
-Place plugin files in `.opencode/plugins/` or `~/.config/opencode/plugins/`. You can also load plugins from npm through the `plugin` option.
+Place plugin files in `.opencode/plugins/` or `~/.config/awmate/plugins/`. You can also load plugins from npm through the `plugin` option.
 
 ```json title="opencode.json"
 {

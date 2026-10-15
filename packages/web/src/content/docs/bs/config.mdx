@@ -43,7 +43,7 @@ Na primjer, ako vaša globalna konfiguracija postavlja `autoupdate: true`, a va�
 Izvori konfiguracije se učitavaju ovim redoslijedom (kasniji izvori poništavaju ranije):
 
 1. **Udaljena konfiguracija** (od `.well-known/opencode`) - organizacijske postavke
-2. **Globalna konfiguracija** (`~/.config/opencode/opencode.json`) - korisničke preferencije
+2. **Globalna konfiguracija** (`~/.config/awmate/opencode.json`) - korisničke preferencije
 3. **Prilagođena konfiguracija** (`OPENCODE_CONFIG` env var) - prilagođena preinačenja
 4. **Konfiguracija projekta** (`opencode.json` u projektu) - postavke specifične za projekat
 5. **`.opencode` direktoriji** - agenti, komande, dodaci
@@ -52,7 +52,7 @@ Izvori konfiguracije se učitavaju ovim redoslijedom (kasniji izvori poništavaj
 To znači da konfiguracije projekta mogu nadjačati globalne zadane postavke, a globalne konfiguracije mogu nadjačati postavke udaljene organizacije.
 
 :::note
-Direktoriji `.opencode` i `~/.config/opencode` koriste **imena u množini** za poddirektorije: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/` i `themes/`. Pojedinačna imena (npr. `agent/`) su također podržana za kompatibilnost unatrag.
+Direktoriji `.opencode` i `~/.config/awmate` koriste **imena u množini** za poddirektorije: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/` i `themes/`. Pojedinačna imena (npr. `agent/`) su također podržana za kompatibilnost unatrag.
 :::
 
 ---
@@ -95,9 +95,9 @@ Možete omogućiti određene servere u vašoj lokalnoj konfiguraciji:
 
 ### Globalno
 
-Postavite svoju globalnu OpenCode konfiguraciju u `~/.config/opencode/opencode.json`. Koristite globalnu konfiguraciju za korisničke preferencije kao što su provajderi, modeli i dozvole.
+Postavite svoju globalnu OpenCode konfiguraciju u `~/.config/awmate/opencode.json`. Koristite globalnu konfiguraciju za korisničke preferencije kao što su provajderi, modeli i dozvole.
 
-Za postavke specifične za TUI, koristite `~/.config/opencode/tui.json`.
+Za postavke specifične za TUI, koristite `~/.config/awmate/tui.json`.
 
 Globalna konfiguracija poništava zadane postavke udaljene organizacije.
 
@@ -335,7 +335,7 @@ Možete konfigurirati specijalizirane agente za određene zadatke putem opcije `
 }
 ```
 
-Također možete definirati agente koristeći markdown datoteke u `~/.config/opencode/agents/` ili `.opencode/agents/`. [Saznajte više ovdje](/docs/agents).
+Također možete definirati agente koristeći markdown datoteke u `~/.config/awmate/agents/` ili `.opencode/agents/`. [Saznajte više ovdje](/docs/agents).
 
 ---
 
@@ -399,7 +399,7 @@ Možete konfigurirati prilagođene naredbe za ponavljanje zadataka putem opcije 
 }
 ```
 
-Također možete definirati naredbe koristeći markdown fajlove u `~/.config/opencode/commands/` ili `.opencode/commands/`. [Saznajte više ovdje](/docs/commands).
+Također možete definirati naredbe koristeći markdown fajlove u `~/.config/awmate/commands/` ili `.opencode/commands/`. [Saznajte više ovdje](/docs/commands).
 
 ---
 
@@ -537,7 +537,7 @@ Možete konfigurirati MCP servere koje želite koristiti putem opcije `mcp`.
 
 [Plugins](/docs/plugins) proširuju AWMate sa prilagođenim alatima, kukicama i integracijama.
 
-Postavite datoteke dodataka u `.opencode/plugins/` ili `~/.config/opencode/plugins/`. Također možete učitati dodatke iz npm-a preko opcije `plugin`.
+Postavite datoteke dodataka u `.opencode/plugins/` ili `~/.config/awmate/plugins/`. Također možete učitati dodatke iz npm-a preko opcije `plugin`.
 
 ```json title="opencode.json"
 {

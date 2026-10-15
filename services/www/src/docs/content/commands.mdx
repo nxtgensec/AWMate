@@ -18,10 +18,10 @@ AWMate submits `Review src/auth.ts for bugs and missing tests.` as a user prompt
 
 ## Markdown
 
-Put global commands in `~/.config/opencode/commands/` and project commands in `.opencode/commands/`.
+Put global commands in `~/.config/awmate/commands/` and project commands in `.opencode/commands/`.
 
 ```text
-~/.config/opencode/commands/review.md
+~/.config/awmate/commands/review.md
 .opencode/commands/review.md
 ```
 
@@ -245,7 +245,7 @@ This example runs in the current session because `subagent` takes precedence.
 Markdown and JSON commands share one registry. Later sources replace earlier commands with the same name.
 
 ```text
-~/.config/opencode/commands/review.md   # Lower priority
+~/.config/awmate/commands/review.md   # Lower priority
 .opencode/commands/review.md           # Replaces the global command
 ```
 

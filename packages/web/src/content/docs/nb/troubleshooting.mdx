@@ -11,7 +11,7 @@ For å feilsøke problemer med AWMate, start med å sjekke loggene og lokale dat
 
 Loggfiler skrives til:
 
-- **macOS/Linux**: `~/.local/share/opencode/log/`
+- **macOS/Linux**: `~/.local/share/awmate/log/`
 - **Windows**: Trykk `WIN+R` og lim inn `%USERPROFILE%\.local\share\opencode\log`
 
 Loggfiler navngis med tidsstempler (f.eks. `2025-01-09T123456.log`) og de siste 10 loggfilene beholdes.
@@ -24,7 +24,7 @@ Du kan angi loggnivået med kommandolinjealternativet `--log-level` for å få m
 
 AWMate lagrer øktdata og andre applikasjonsdata på disken på:
 
-- **macOS/Linux**: `~/.local/share/opencode/`
+- **macOS/Linux**: `~/.local/share/awmate/`
 - **Windows**: Trykk `WIN+R` og lim inn `%USERPROFILE%\.local\share\opencode`
 
 Denne katalogen inneholder:
@@ -57,8 +57,8 @@ Hvis skrivebordsappen krasjer ved oppstart, henger eller oppfører seg merkelig,
 
 Åpne den globale konfigurasjonsfilen og se etter en `plugin`-nøkkel.
 
-- **macOS/Linux**: `~/.config/opencode/opencode.jsonc` (eller `~/.config/opencode/opencode.json`)
-- **macOS/Linux** (eldre installasjoner): `~/.local/share/opencode/opencode.jsonc`
+- **macOS/Linux**: `~/.config/awmate/opencode.jsonc` (eller `~/.config/awmate/opencode.json`)
+- **macOS/Linux** (eldre installasjoner): `~/.local/share/awmate/opencode.jsonc`
 - **Windows**: Trykk `WIN+R` og lim inn `%USERPROFILE%\.config\opencode\opencode.jsonc`
 
 Hvis du har konfigurert plugins, deaktiver dem midlertidig ved å fjerne nøkkelen eller sette den til en tom matrise:
@@ -75,7 +75,7 @@ Hvis du har konfigurert plugins, deaktiver dem midlertidig ved å fjerne nøkkel
 AWMate kan også laste lokale plugins fra disken. Flytt disse midlertidig ut av veien (eller gi nytt navn til mappen) og start skrivebordsappen på nytt:
 
 - **Globale plugins**
-  - **macOS/Linux**: `~/.config/opencode/plugins/`
+  - **macOS/Linux**: `~/.config/awmate/plugins/`
   - **Windows**: Trykk `WIN+R` og lim inn `%USERPROFILE%\.config\opencode\plugins`
 - **Prosjektplugins** (bare hvis du bruker konfigurasjon per prosjekt)
   - `<your-project>/.opencode/plugins/`
@@ -91,8 +91,8 @@ Hvis deaktivering av plugins ikke hjelper (eller en plugin-installasjon sitter f
 1. Avslutt AWMate Desktop helt.
 2. Slett hurtigbufferkatalogen:
 
-- **macOS**: Finder -> `Cmd+Shift+G` -> lim inn `~/.cache/opencode`
-- **Linux**: slett `~/.cache/opencode` (eller kjør `rm -rf ~/.cache/opencode`)
+- **macOS**: Finder -> `Cmd+Shift+G` -> lim inn `~/.cache/awmate`
+- **Linux**: slett `~/.cache/awmate` (eller kjør `rm -rf ~/.cache/awmate`)
 - **Windows**: Trykk `WIN+R` og lim inn `%USERPROFILE%\.cache\opencode`
 
 3. Start AWMate Desktop på nytt.
@@ -184,7 +184,7 @@ For å løse problemer med leverandørpakke:
 1. Tøm leverandørens pakkebuffer:
 
    ```bash
-   rm -rf ~/.cache/opencode
+   rm -rf ~/.cache/awmate
    ```
 
    På Windows, trykk `WIN+R` og slett: `%USERPROFILE%\.cache\opencode`
